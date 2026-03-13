@@ -1,0 +1,1736 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dra. Laura Bezerra • Psicóloga e Neuropsicóloga Clínica • CRP 02/18793</title>
+
+  <style>
+    :root{
+      --bg-1:#f7f4ef;
+      --bg-2:#ffffff;
+      --ink:#111827;
+      --muted:#4b5563;
+      --soft:#6b7280;
+
+      --accent:#3aa6b9;
+      --accent2:#2b6f7a;
+      --rose:#f3b3c6;
+
+      --card:rgba(255,255,255,.80);
+      --stroke:rgba(17,24,39,.10);
+      --shadow:0 18px 45px rgba(17,24,39,.10);
+      --shadow2:0 10px 30px rgba(17,24,39,.12);
+
+      --radius:22px;
+      --radius2:18px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(58,166,185,.10), transparent 60%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(43,111,122,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2) 45%, var(--bg-1));
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(247,244,239,.78);
+      border-bottom:1px solid rgba(17,24,39,.08);
+    }
+
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:240px;
+    }
+
+    .brand .logo{
+      width:40px;height:40px;
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid rgba(17,24,39,.10);
+      box-shadow:0 8px 16px rgba(17,24,39,.10);
+      background:#fff;
+      flex:0 0 auto;
+    }
+
+    .brand .txt{line-height:1.15}
+    .brand .txt .name{
+      font-weight:800;
+      font-size:14.5px;
+      letter-spacing:.2px;
+    }
+    .brand .txt .meta{
+      color:var(--muted);
+      font-size:12.5px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:320px;
+    }
+
+    .nav{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      align-items:center;
+    }
+
+    .nav a{
+      font-size:12.5px;
+      color:#1f2937;
+      background:rgba(255,255,255,.70);
+      border:1px solid rgba(17,24,39,.10);
+      padding:8px 12px;
+      border-radius:999px;
+      box-shadow:0 10px 20px rgba(17,24,39,.06);
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .nav a:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.92);
+      border-color:rgba(17,24,39,.16);
+    }
+
+    .burger{
+      display:none;
+      border:1px solid rgba(17,24,39,.12);
+      background:rgba(255,255,255,.70);
+      border-radius:12px;
+      padding:9px 10px;
+      box-shadow:0 10px 20px rgba(17,24,39,.06);
+      cursor:pointer;
+    }
+    .burger span{
+      display:block;
+      width:18px;height:2px;
+      background:#111827;
+      margin:4px 0;
+      border-radius:3px;
+    }
+
+    .nav-mobile{
+      display:none;
+      padding:0 16px 14px;
+      max-width:var(--max);
+      margin:0 auto;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .nav-mobile a{
+      font-size:13px;
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(17,24,39,.10);
+      padding:9px 12px;
+      border-radius:999px;
+      box-shadow:0 10px 20px rgba(17,24,39,.06);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:24px 16px 80px;
+    }
+
+    .section{
+      margin-top:18px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
+      border:1px solid rgba(17,24,39,.10);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+    }
+
+    .hero-shell{
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+    }
+
+    .row{
+      display:flex;
+      gap:18px;
+      padding:18px;
+      align-items:stretch;
+    }
+
+    .section:nth-of-type(even) .row{
+      flex-direction:row-reverse;
+    }
+
+    .text{
+      flex:1 1 52%;
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.58);
+      border:1px solid rgba(17,24,39,.08);
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:380px;
+    }
+
+    .imgbox{
+      flex:1 1 48%;
+      border-radius:var(--radius2);
+      overflow:hidden;
+      border:1px solid rgba(17,24,39,.10);
+      background:#fff;
+      position:relative;
+      min-height:380px;
+    }
+
+    .imgbox img,
+    .imgbox video{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-0.8px;
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:26px;
+      letter-spacing:-0.3px;
+    }
+
+    h3{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:-0.1px;
+    }
+
+    p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14.8px;
+      line-height:1.65;
+    }
+
+    .hero-title{
+      margin:0 0 6px;
+      font-size:28px;
+      line-height:1.1;
+      letter-spacing:-0.4px;
+      font-weight:900;
+      color:var(--ink);
+    }
+
+    .hero-meta{
+      margin:0 0 16px;
+      font-size:15px;
+      color:#374151;
+      font-weight:700;
+    }
+
+    .hero-block{
+      max-width:590px;
+      margin-bottom:14px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.72;
+    }
+
+    .hero-block strong{
+      color:#1f2937;
+      font-weight:800;
+    }
+
+    .tcc-tip{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      position:relative;
+      color:#1f2937;
+      font-weight:800;
+      cursor:help;
+    }
+
+    .tcc-tip .q{
+      width:22px;height:22px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, rgba(58,166,185,.95), rgba(43,111,122,.95));
+      color:#fff;
+      font-size:13px;
+      font-weight:900;
+      box-shadow:0 8px 18px rgba(58,166,185,.24);
+    }
+
+    .tcc-tip .bubble{
+      position:absolute;
+      left:0;
+      top:130%;
+      width:290px;
+      padding:12px;
+      border-radius:14px;
+      background:#fff;
+      border:1px solid rgba(17,24,39,.10);
+      box-shadow:0 18px 35px rgba(17,24,39,.14);
+      color:#374151;
+      font-weight:500;
+      font-size:13px;
+      line-height:1.55;
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(6px);
+      transition:.18s ease;
+      z-index:10;
+    }
+
+    .tcc-tip:hover .bubble,
+    .tcc-tip:focus-within .bubble{
+      opacity:1;
+      pointer-events:auto;
+      transform:translateY(0);
+    }
+
+    .hero-cta{
+      margin-top:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .hero-cta .btn.primary{
+      width:100%;
+      padding:15px 14px;
+      font-size:16px;
+    }
+
+    .hero-cta .row2{
+      display:flex;
+      gap:10px;
+    }
+
+    .hero-cta .row2 a{flex:1}
+
+    .hero-alert{
+      margin-top:16px;
+      font-size:13.5px;
+      color:#374151;
+      background:rgba(243,244,246,.78);
+      border:1px solid rgba(17,24,39,.10);
+      border-radius:16px;
+      padding:14px;
+      line-height:1.65;
+    }
+
+    .hero-alert h3{
+      margin:0 0 10px;
+      font-size:15px;
+      color:#111827;
+    }
+
+    .hero-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .hero-links a{
+      color:var(--accent2);
+      text-decoration:underline;
+      font-weight:700;
+    }
+
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .btn{
+      border-radius:14px;
+      padding:11px 14px;
+      border:1px solid rgba(17,24,39,.12);
+      background:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:13.5px;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+      box-shadow:0 10px 18px rgba(17,24,39,.08);
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.96);
+    }
+
+    .btn.primary{
+      border-color:rgba(58,166,185,.35);
+      background:linear-gradient(180deg, rgba(58,166,185,.96), rgba(43,111,122,.96));
+      color:#fff;
+      box-shadow:0 16px 28px rgba(58,166,185,.22);
+    }
+
+    .btn.ghost{
+      background:rgba(243,244,246,.95);
+    }
+
+    .btn.big{
+      padding:14px 16px;
+      font-size:15px;
+      width:100%;
+    }
+
+    .btn.small{
+      padding:9px 12px;
+      font-size:12.5px;
+    }
+
+    .note{
+      margin-top:14px;
+      font-size:12.8px;
+      color:#374151;
+      background:rgba(243,244,246,.85);
+      border:1px solid rgba(17,24,39,.10);
+      padding:12px;
+      border-radius:14px;
+    }
+
+    .chips-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .cause-btn{
+      width:100%;
+      justify-content:flex-start;
+      text-align:left;
+      min-height:56px;
+      line-height:1.35;
+    }
+
+    .inline-panel{
+      display:none;
+      margin-top:12px;
+      padding:14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.68);
+      border:1px solid rgba(17,24,39,.10);
+    }
+
+    .inline-panel.active{display:block}
+
+    .inline-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .inline-links a{
+      color:var(--accent2);
+      text-decoration:underline;
+      font-weight:700;
+    }
+
+    .calendar-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+      margin-bottom:12px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+
+    .field label{
+      font-size:12.5px;
+      color:#374151;
+      font-weight:700;
+    }
+
+    .input,
+    .select,
+    .textarea{
+      width:100%;
+      border:1px solid rgba(17,24,39,.12);
+      background:#fff;
+      border-radius:12px;
+      padding:11px 12px;
+      color:#111827;
+      outline:none;
+    }
+
+    .textarea{
+      min-height:92px;
+      resize:vertical;
+    }
+
+    .pay-wrap{display:flex;flex-direction:column;gap:12px}
+    .pay-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .pay-panel{
+      display:none;
+      margin-top:6px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(17,24,39,.10);
+      background:rgba(255,255,255,.65);
+    }
+    .pay-panel.active{display:block}
+
+    .pay-subactions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .pay-box{
+      display:none;
+      margin-top:10px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(17,24,39,.10);
+      background:rgba(243,244,246,.75);
+    }
+    .pay-box.active{display:block}
+
+    .copyline{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:12.5px;
+      line-height:1.5;
+      color:#111827;
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(17,24,39,.10);
+      border-radius:12px;
+      padding:10px;
+      flex:1 1 520px;
+      word-break:break-all;
+      white-space:pre-wrap;
+    }
+
+    .copybtn{
+      border-radius:12px;
+      padding:10px 12px;
+      border:1px solid rgba(58,166,185,.35);
+      background:linear-gradient(180deg, rgba(58,166,185,.95), rgba(43,111,122,.95));
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow:0 12px 22px rgba(58,166,185,.18);
+      flex:0 0 auto;
+    }
+
+    .qrimg{
+      width:260px;
+      max-width:100%;
+      border-radius:16px;
+      border:1px solid rgba(17,24,39,.10);
+      background:#fff;
+      padding:10px;
+    }
+
+    .footer{
+      max-width:var(--max);
+      margin:18px auto 0;
+      padding:0 16px 80px;
+    }
+
+    .footer-card{
+      display:grid;
+      grid-template-columns:280px 1fr;
+      gap:22px;
+      align-items:center;
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(17,24,39,.10);
+      border-radius:28px;
+      box-shadow:var(--shadow2);
+      padding:22px;
+      overflow:hidden;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px;
+    }
+
+    .footer-brand img{
+      width:100%;
+      max-width:220px;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .footer-info{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      color:#374151;
+    }
+
+    .footer-head{
+      font-size:16px;
+      line-height:1.6;
+      color:#111827;
+    }
+
+    .footer-head strong{
+      font-size:18px;
+      color:#111827;
+    }
+
+    .footer-mainline{
+      font-size:15px;
+      color:var(--accent2);
+      font-weight:700;
+      line-height:1.6;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:4px;
+    }
+
+    .footer-links a{
+      color:var(--accent2);
+      text-decoration:underline;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .footer-legal{
+      font-size:12.5px;
+      color:#6b7280;
+      line-height:1.7;
+      margin-top:4px;
+    }
+
+    .whats-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:60;
+    }
+
+    .whats-float a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      background:linear-gradient(180deg, rgba(58,166,185,.95), rgba(43,111,122,.95));
+      color:#fff;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.20);
+      box-shadow:0 18px 35px rgba(43,111,122,.25);
+    }
+
+    .divider{
+      height:1px;
+      background:rgba(17,24,39,.08);
+      margin:14px 0;
+    }
+
+    /* ===== Modal ===== */
+    .modal{
+      position:fixed;
+      inset:0;
+      background:rgba(17,24,39,.45);
+      backdrop-filter:blur(4px);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      z-index:100;
+    }
+
+    .modal.active{display:flex}
+
+    .modal-card{
+      width:min(760px,100%);
+      max-height:90vh;
+      overflow:auto;
+      background:#fff;
+      border-radius:24px;
+      border:1px solid rgba(17,24,39,.10);
+      box-shadow:0 25px 60px rgba(17,24,39,.22);
+      padding:20px;
+    }
+
+    .modal-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .modal-head h3{
+      margin:0;
+      font-size:22px;
+      color:#111827;
+    }
+
+    .modal-close{
+      border:none;
+      background:rgba(243,244,246,.95);
+      width:38px;
+      height:38px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:18px;
+      font-weight:900;
+      color:#111827;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .full{grid-column:1 / -1}
+
+    .hint{
+      font-size:12px;
+      color:#6b7280;
+      line-height:1.5;
+      margin-top:4px;
+    }
+
+    .success{
+      display:none;
+      margin-top:10px;
+      padding:12px;
+      border-radius:14px;
+      background:rgba(58,166,185,.10);
+      border:1px solid rgba(58,166,185,.22);
+      color:#1f2937;
+      font-size:13px;
+    }
+
+    .success.active{display:block}
+
+    @media (max-width:980px){
+      h1{font-size:38px}
+      .brand .txt .meta{max-width:220px}
+      .footer-card{grid-template-columns:1fr}
+      .footer-brand{justify-content:flex-start}
+      .footer-brand img{max-width:180px}
+    }
+
+    @media (max-width:820px){
+      .nav{display:none}
+      .burger{display:block}
+      .nav-mobile{display:flex}
+      .row,
+      .section:nth-of-type(even) .row{
+        flex-direction:column;
+      }
+      .text,.imgbox{min-height:auto}
+      .imgbox{height:360px}
+      .hero-cta .row2{flex-direction:column}
+      .chips-grid{grid-template-columns:1fr}
+      .calendar-wrap,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+      .footer-card{padding:18px}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo">
+          <img src="./logo.jpg" alt="Logo Laura Bezerra" />
+        </div>
+        <div class="txt">
+          <div class="name">Dra. Laura Bezerra</div>
+          <div class="meta">Psicóloga • Neuropsicóloga Clínica • CRP 02/18793</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegação">
+        <a href="#primeiro">Primeiro atendimento</a>
+        <a href="#paciente">Área do paciente</a>
+        <a href="#como">Como funciona</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#pagamento">Pagamento e dúvidas</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" id="navMobile" aria-label="Navegação mobile" style="display:none;">
+      <a href="#primeiro">Primeiro atendimento</a>
+      <a href="#paciente">Área do paciente</a>
+      <a href="#como">Como funciona</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#pagamento">Pagamento e dúvidas</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="section hero-shell" id="topo">
+      <div class="row">
+        <div class="text">
+          <div class="hero-title">Dra. Laura Bezerra</div>
+          <div class="hero-meta">Psicóloga • Neuropsicóloga Clínica • CRP 02/18793</div>
+
+          <div class="hero-block">
+            Psicoterapia e avaliação neuropsicológica para adultos, crianças e adolescentes, com abordagem baseada em evidências e foco em
+            <span class="tcc-tip">
+              TCC (Terapia Cognitivo-Comportamental)
+              <span class="q">?</span>
+              <span class="bubble">
+                A TCC é uma abordagem psicológica amplamente estudada, prática e objetiva. Ela trabalha a relação entre pensamentos, emoções e comportamentos e é uma das abordagens mais indicadas por psiquiatras.
+              </span>
+            </span>.
+          </div>
+
+          <div class="hero-block">
+            Atendimento online e presencial.
+          </div>
+
+          <div class="hero-block">
+            Se é a sua primeira vez aqui, você pode clicar em <strong>Primeiro atendimento</strong> para receber orientações iniciais e verificar disponibilidade de horário.
+          </div>
+
+          <div class="hero-block" style="margin-bottom:0;">
+            Todo o acompanhamento ocorre em ambiente de escuta profissional, com sigilo ético garantido e proteção dos dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD).
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#primeiro">Primeiro atendimento</a>
+            <div class="row2">
+              <a class="btn ghost" href="#paciente">Já sou paciente</a>
+              <a class="btn" href="#como">Quero mais informações</a>
+            </div>
+          </div>
+
+          <div class="hero-alert">
+            <h3>Urgência / emergência</h3>
+            Situações de urgência não devem aguardar retorno por mensagem.
+            <div class="hero-links">
+              <a href="tel:192">SAMU 192</a>
+              <a href="tel:188">CVV 188 (24h)</a>
+              <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <video
+            id="heroVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="./hero.JPG"
+            aria-label="Vídeo de apresentação da Dra. Laura"
+          >
+            <source src="./video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMEIRO ATENDIMENTO -->
+    <section class="section" id="primeiro">
+      <div class="row">
+        <div class="text">
+          <h2>Primeiro atendimento</h2>
+          <p>
+            Escolha um tema e responda algumas perguntas para me ajudar na triagem. Essas perguntas agilizam o acolhimento, mas são opcionais — fique à vontade para não respondê-las.
+          </p>
+
+          <div class="chips-grid">
+            <button class="btn cause-btn" data-cause="Ansiedade">1. Ansiedade</button>
+            <button class="btn cause-btn" data-cause="Depressão ou tristeza persistente">2. Depressão ou tristeza persistente</button>
+            <button class="btn cause-btn" data-cause="Estresse, esgotamento emocional ou burnout">3. Estresse, esgotamento emocional ou burnout</button>
+            <button class="btn cause-btn" data-cause="Dificuldades nos relacionamentos">4. Dificuldades nos relacionamentos</button>
+            <button class="btn cause-btn" data-cause="Baixa autoestima ou insegurança">5. Baixa autoestima ou insegurança</button>
+            <button class="btn cause-btn" data-cause="Dificuldade para lidar com emoções">6. Dificuldade para lidar com emoções</button>
+            <button class="btn cause-btn" data-cause="Problemas de atenção, concentração ou memória">7. Problemas de atenção, concentração ou memória</button>
+            <button class="btn cause-btn" data-cause="Suspeita de TDAH, autismo ou outras condições do neurodesenvolvimento">8. Suspeita de TDAH, autismo ou outras condições do neurodesenvolvimento</button>
+            <button class="btn cause-btn" data-cause="Avaliação neuropsicológica">9. Avaliação neuropsicológica</button>
+            <button class="btn cause-btn" data-cause="Momentos de mudança ou crise na vida">10. Momentos de mudança ou crise na vida</button>
+          </div>
+
+          <div class="btns">
+            <button class="btn ghost big" type="button" id="urgentBtn">Urgência / emergência</button>
+          </div>
+
+          <div class="inline-panel" id="urgentPanel">
+            <p><strong>Acolhimento inicial</strong></p>
+            <p>
+              A Dra. Laura entrará em contato o mais rápido possível, mas situações de urgência não devem aguardar retorno por mensagem.
+            </p>
+            <p>
+              Se houver risco à sua segurança, risco à segurança de outra pessoa, violência em curso, ou sofrimento emocional intenso, procure atendimento imediato.
+            </p>
+            <div class="inline-links">
+              <a href="tel:192">SAMU 192</a>
+              <a href="tel:188">CVV 188 (24h)</a>
+              <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>
+              <a href="https://wa.me/5581996593907?text=Olá,%20preciso%20de%20acolhimento%20e%20orientação%20com%20urgência." target="_blank" rel="noopener">Falar com a Dra.</a>
+            </div>
+            <div class="note" style="margin-top:10px;">
+              Em situação de violência ou ameaça imediata, procure também a rede de proteção e os serviços públicos de emergência da sua região.
+            </div>
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./atendimento.JPG" alt="Atendimento psicológico" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREA DO PACIENTE -->
+    <section class="section" id="paciente">
+      <div class="row">
+        <div class="text">
+          <h2>Área do paciente</h2>
+          <p>
+            Para quem já é paciente: confirmação, cancelamento, nova consulta e solicitações administrativas — com organização e respeito ao seu tempo.
+          </p>
+
+          <div class="btns">
+            <a class="btn primary" href="https://wa.me/5581996593907?text=Olá,%20sou%20paciente%20e%20quero%20confirmar%20minha%20consulta." target="_blank" rel="noopener">Confirmar consulta</a>
+            <a class="btn ghost" href="https://wa.me/5581996593907?text=Olá,%20sou%20paciente%20e%20preciso%20cancelar%20minha%20consulta." target="_blank" rel="noopener">Cancelar consulta</a>
+          </div>
+
+          <div class="btns">
+            <button class="btn primary big" type="button" id="btnNovaConsultaPaciente">Já sou paciente • marcar nova consulta</button>
+            <button class="btn big" type="button" id="btnSolicitacao">Fazer solicitação</button>
+          </div>
+
+          <div class="note">
+            Se precisar remarcar, diga dia, turno e modalidade desejada.
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./profissional.JPG" alt="Ambiente profissional" />
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section" id="como">
+      <div class="row">
+        <div class="text">
+          <h2>Como funciona</h2>
+          <p>
+            A psicoterapia é um processo de acompanhamento psicológico que ajuda a compreender emoções, pensamentos, comportamentos e situações da vida cotidiana. Ela pode auxiliar no enfrentamento de sofrimentos emocionais, dificuldades nos relacionamentos, momentos de crise e questões ligadas ao funcionamento cognitivo e comportamental.
+          </p>
+          <p>
+            A avaliação neuropsicológica é indicada quando há necessidade de investigar atenção, memória, linguagem, aprendizagem, funções executivas e outras habilidades cognitivas, sempre com devolutiva profissional.
+          </p>
+          <p>
+            Todo o processo ocorre com sigilo ético-profissional e proteção dos dados pessoais conforme a LGPD.
+          </p>
+
+          <div class="btns">
+            <button class="btn" type="button" id="btnDuvidasComoFunciona">Tirar dúvidas</button>
+            <a class="btn ghost" href="#sobre">Sobre a Dra. Laura</a>
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./clinica.JPG" alt="Clínica" />
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="section" id="agenda">
+      <div class="row">
+        <div class="text">
+          <h2>Agenda</h2>
+          <p>
+            Escolha a modalidade, o dia e o turno desejados. Para atendimento presencial, a agenda é aberta às terças. Para atendimento online, a agenda funciona nos demais dias úteis.
+          </p>
+
+          <div class="calendar-wrap">
+            <div class="field">
+              <label for="agendaModalidade">Modalidade</label>
+              <select id="agendaModalidade" class="select">
+                <option value="">Selecione</option>
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="agendaData">Dia</label>
+              <input id="agendaData" class="input" type="date" />
+            </div>
+
+            <div class="field">
+              <label for="agendaTurno">Turno</label>
+              <select id="agendaTurno" class="select">
+                <option value="">Selecione</option>
+                <option value="manhã">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btns">
+            <button class="btn primary" type="button" id="btnVerDisponibilidade">Ver disponibilidade</button>
+            <button class="btn" type="button" id="btnDuvidasAgenda">Dúvidas</button>
+          </div>
+
+          <div class="inline-panel" id="agendaDuvidasPanel">
+            <p><strong>Dias de atendimento</strong></p>
+            <p>Presencial em Catende: terças-feiras.</p>
+            <p>Online: demais dias úteis, exceto sábado e domingo.</p>
+            <div class="inline-links">
+              <a href="https://share.google/ekHnThKYd0oY9h69c" target="_blank" rel="noopener">Localização Clínica Oral Face Catende</a>
+              <a href="https://www.instagram.com/clinicaoralfacecatende/" target="_blank" rel="noopener">Instagram da Clínica</a>
+              <a href="https://www.instagram.com/laurabezerrapsi/" target="_blank" rel="noopener">Instagram da Dra. Laura</a>
+            </div>
+          </div>
+
+          <div class="note">
+            Presencial somente às terças. Online nos demais dias úteis.
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./retrato.JPG" alt="Retrato profissional" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="row">
+        <div class="text">
+          <h2>Sobre a Dra. Laura</h2>
+          <p>
+            Psicóloga e Neuropsicóloga Clínica. Atuação com adultos, crianças e adolescentes, com foco em escuta qualificada, responsabilidade técnica e abordagem baseada em evidências.
+          </p>
+
+          <div class="btns">
+            <button class="btn primary" type="button" id="btnFalarSobre">Falar no WhatsApp</button>
+            <a class="btn ghost" href="https://www.instagram.com/laurabezerrapsi/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+
+          <div class="note">
+            Presencial às terças em Catende/PE • Online nos demais dias úteis.
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./sorriso.JPG" alt="Dra. Laura" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGAMENTO -->
+    <section class="section" id="pagamento">
+      <div class="row">
+        <div class="text">
+          <h2>Pagamento e dúvidas</h2>
+          <p>
+            Escolha uma opção abaixo. Os dados só aparecem quando você clicar.
+          </p>
+
+          <div class="pay-wrap">
+            <div class="pay-actions">
+              <button class="btn primary" type="button" id="btnPay">Fazer pagamento</button>
+              <button class="btn" type="button" id="btnPayHelp">Tirar dúvidas sobre pagamento</button>
+            </div>
+
+            <div class="pay-panel" id="panelHelp">
+              <p style="margin-bottom:10px;"><strong>Formas de pagamento</strong></p>
+              <p>
+                Os pagamentos podem ser realizados por Pix. Em caso de dúvidas sobre confirmação, valores, comprovante ou outras orientações, você pode falar pelo WhatsApp.
+              </p>
+              <div class="btns" style="margin-top:0;">
+                <button class="btn ghost" type="button" id="goToPayPanel">Ir para pagamento</button>
+                <a class="btn ghost" href="https://wa.me/5581996593907?text=Olá,%20tenho%20dúvidas%20sobre%20pagamento." target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="pay-panel" id="panelPay">
+              <p style="margin-bottom:10px;"><strong>Pix (escolha a forma):</strong></p>
+
+              <div class="pay-subactions">
+                <button class="btn ghost" type="button" id="optQr">QR Code</button>
+                <button class="btn ghost" type="button" id="optCopy">Pix Copia e Cola</button>
+                <button class="btn ghost" type="button" id="optKey">Chave Pix</button>
+              </div>
+
+              <div class="pay-box" id="boxQr">
+                <p style="margin-bottom:10px;"><b>QR Code Pix</b></p>
+                <img class="qrimg" src="./pix.png" alt="QR Code Pix" />
+              </div>
+
+              <div class="pay-box" id="boxCopy">
+                <p style="margin-bottom:10px;"><b>Pix Copia e Cola</b></p>
+                <div class="copyline">
+                  <div class="code" id="pixCode">00020126580014BR.GOV.BCB.PIX0136caf1359e-d8c6-4f1b-b93b-095f291a3a955204000053039865802BR5925Laura Vanessa Bezerra Sil6009SAO PAULO62140510GRpmZ4xUa063043E4A</div>
+                  <button class="copybtn" type="button" data-copy="pixCode">Copiar</button>
+                </div>
+              </div>
+
+              <div class="pay-box" id="boxKey">
+                <p style="margin-bottom:10px;"><b>Chave Pix (telefone)</b></p>
+                <div class="copyline">
+                  <div class="code" id="pixKey">81996593907</div>
+                  <button class="copybtn" type="button" data-copy="pixKey">Copiar</button>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <a class="btn" href="https://wa.me/5581996593907?text=Olá,%20fiz%20o%20pagamento%20agora.%20Posso%20te%20enviar%20o%20comprovante%3F" target="_blank" rel="noopener">
+                Confirmar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="imgbox">
+          <img src="./extra.jpg" alt="Imagem de apoio" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-card">
+      <div class="footer-brand">
+        <img src="./logo.jpg" alt="Logomarca Laura Bezerra" />
+      </div>
+
+      <div class="footer-info">
+        <div class="footer-head">
+          <strong>Dra. Laura Bezerra</strong> • Psicóloga • Neuropsicóloga Clínica • CRP 02/18793
+        </div>
+
+        <div class="footer-mainline">
+          Atendimento presencial às terças em Catende/PE • Atendimento online nos demais dias úteis.
+        </div>
+
+        <div style="font-size:14px; color:#4b5563;">
+          Este site é informativo e não substitui atendimento de urgência.
+        </div>
+
+        <div class="footer-links">
+          <a href="https://wa.me/5581996593907?text=Olá,%20vim%20pelo%20site." target="_blank" rel="noopener">WhatsApp Dra. Laura</a>
+          <a href="https://wa.me/5581993498203?text=Olá,%20vim%20pelo%20site%20para%20atendimento%20presencial." target="_blank" rel="noopener">WhatsApp Clínica</a>
+          <a href="https://www.instagram.com/laurabezerrapsi/" target="_blank" rel="noopener">Instagram Dra. Laura</a>
+          <a href="https://www.instagram.com/clinicaoralfacecatende/" target="_blank" rel="noopener">Instagram Clínica</a>
+        </div>
+
+        <div class="footer-legal">
+          © 2026 Dra. Laura Bezerra. Todos os direitos reservados.<br>
+          Conteúdo, identidade visual e elementos deste site são de uso exclusivo da profissional, nos termos da legislação aplicável.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whats-float">
+    <a href="https://wa.me/5581996593907?text=Olá,%20vim%20pelo%20site." target="_blank" rel="noopener">
+      WhatsApp
+    </a>
+  </div>
+
+  <!-- MODAL GLOBAL -->
+  <div class="modal" id="appModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle">Formulário</h3>
+          <div class="hint" id="modalHint"></div>
+        </div>
+        <button class="modal-close" type="button" id="closeModal">×</button>
+      </div>
+
+      <form id="dynamicForm">
+        <div class="form-grid" id="formFields"></div>
+        <div class="btns" style="margin-top:16px;">
+          <button class="btn primary" type="submit">Enviar para o WhatsApp</button>
+          <button class="btn" type="button" id="cancelModal">Cancelar</button>
+        </div>
+        <div class="success" id="modalSuccess">Abrindo WhatsApp...</div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const DRA_WHATS = '5581996593907';
+    const CLINICA_WHATS = '5581993498203';
+
+    const burger = document.getElementById('burger');
+    const navMobile = document.getElementById('navMobile');
+
+    burger.addEventListener('click', () => {
+      navMobile.style.display = (navMobile.style.display === 'none' || !navMobile.style.display) ? 'flex' : 'none';
+    });
+
+    navMobile.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navMobile.style.display = 'none');
+    });
+
+    const heroVideo = document.getElementById('heroVideo');
+    const tryPlay = () => {
+      if (!heroVideo) return;
+      const p = heroVideo.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+    window.addEventListener('load', tryPlay);
+    document.addEventListener('click', tryPlay, { once:true });
+    document.addEventListener('touchstart', tryPlay, { once:true });
+
+    const urgentBtn = document.getElementById('urgentBtn');
+    const urgentPanel = document.getElementById('urgentPanel');
+    urgentBtn.addEventListener('click', () => {
+      urgentPanel.classList.toggle('active');
+    });
+
+    const agendaDuvidasPanel = document.getElementById('agendaDuvidasPanel');
+    document.getElementById('btnDuvidasAgenda').addEventListener('click', () => {
+      agendaDuvidasPanel.classList.toggle('active');
+    });
+
+    // Modal base
+    const appModal = document.getElementById('appModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalHint = document.getElementById('modalHint');
+    const formFields = document.getElementById('formFields');
+    const dynamicForm = document.getElementById('dynamicForm');
+    const closeModal = document.getElementById('closeModal');
+    const cancelModal = document.getElementById('cancelModal');
+    const modalSuccess = document.getElementById('modalSuccess');
+
+    let currentFormConfig = null;
+
+    function openModal(title, hint, config){
+      modalTitle.textContent = title;
+      modalHint.textContent = hint || '';
+      currentFormConfig = config;
+      modalSuccess.classList.remove('active');
+      renderFields(config.fields || []);
+      appModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModalFn(){
+      appModal.classList.remove('active');
+      document.body.style.overflow = '';
+      dynamicForm.reset();
+      formFields.innerHTML = '';
+      currentFormConfig = null;
+    }
+
+    closeModal.addEventListener('click', closeModalFn);
+    cancelModal.addEventListener('click', closeModalFn);
+    appModal.addEventListener('click', (e) => {
+      if(e.target === appModal) closeModalFn();
+    });
+
+    function renderFields(fields){
+      formFields.innerHTML = '';
+
+      fields.forEach(field => {
+        const wrap = document.createElement('div');
+        wrap.className = 'field' + (field.full ? ' full' : '');
+
+        const label = document.createElement('label');
+        label.setAttribute('for', field.name);
+        label.textContent = field.label;
+        wrap.appendChild(label);
+
+        let input;
+        if(field.type === 'select'){
+          input = document.createElement('select');
+          input.className = 'select';
+          input.name = field.name;
+          input.id = field.name;
+          if(field.required) input.required = true;
+
+          const first = document.createElement('option');
+          first.value = '';
+          first.textContent = 'Selecione';
+          input.appendChild(first);
+
+          (field.options || []).forEach(opt => {
+            const o = document.createElement('option');
+            o.value = opt;
+            o.textContent = opt;
+            input.appendChild(o);
+          });
+        } else if(field.type === 'textarea'){
+          input = document.createElement('textarea');
+          input.className = 'textarea';
+          input.name = field.name;
+          input.id = field.name;
+          input.placeholder = field.placeholder || '';
+          if(field.required) input.required = true;
+        } else {
+          input = document.createElement('input');
+          input.className = 'input';
+          input.type = field.type || 'text';
+          input.name = field.name;
+          input.id = field.name;
+          input.placeholder = field.placeholder || '';
+          if(field.required) input.required = true;
+        }
+
+        if(field.value) input.value = field.value;
+        if(field.readonly) input.readOnly = true;
+
+        wrap.appendChild(input);
+
+        if(field.hint){
+          const hint = document.createElement('div');
+          hint.className = 'hint';
+          hint.textContent = field.hint;
+          wrap.appendChild(hint);
+        }
+
+        formFields.appendChild(wrap);
+      });
+    }
+
+    function getFormData(form){
+      const fd = new FormData(form);
+      const obj = {};
+      for (const [key, value] of fd.entries()) obj[key] = value;
+      return obj;
+    }
+
+    function targetNumberByModality(modality){
+      return modality === 'presencial' ? CLINICA_WHATS : DRA_WHATS;
+    }
+
+    function openWhats(number, text){
+      const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
+      modalSuccess.classList.add('active');
+      window.open(url, '_blank');
+      setTimeout(closeModalFn, 600);
+    }
+
+    function buildMessageFromConfig(config, data){
+      if (typeof config.buildMessage === 'function') {
+        return config.buildMessage(data);
+      }
+      return 'Olá.';
+    }
+
+    dynamicForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!currentFormConfig) return;
+      const data = getFormData(dynamicForm);
+
+      if (typeof currentFormConfig.beforeSubmit === 'function') {
+        const result = currentFormConfig.beforeSubmit(data);
+        if (result && result.ok === false) {
+          alert(result.message || 'Verifique as informações.');
+          return;
+        }
+      }
+
+      const modality = data.modalidade || currentFormConfig.defaultModality || 'online';
+      const number = currentFormConfig.fixedNumber || targetNumberByModality(modality);
+      const text = buildMessageFromConfig(currentFormConfig, data);
+      openWhats(number, text);
+    });
+
+    // Base fields
+    const baseFields = [
+      { name:'nome', label:'Nome', type:'text', required:true, placeholder:'Seu nome' },
+      { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+      { name:'modalidade', label:'Modalidade', type:'select', required:true, options:['online','presencial'] }
+    ];
+
+    const triageByCause = {
+      'Ansiedade': [
+        { name:'freq', label:'Com que frequência isso acontece?', type:'select', required:true, options:['Raramente','Às vezes','Frequentemente','Quase todos os dias'] },
+        { name:'impacto', label:'Quanto isso interfere na rotina?', type:'select', required:true, options:['Pouco','Moderadamente','Muito'] },
+        { name:'gatilhos', label:'Existe alguma situação que costuma piorar?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Depressão ou tristeza persistente': [
+        { name:'tempo', label:'Há quanto tempo isso vem acontecendo?', type:'select', required:true, options:['Dias','Semanas','Meses','Mais de 1 ano'] },
+        { name:'interesse', label:'Tem percebido perda de interesse pelas coisas?', type:'select', required:true, options:['Sim','Não','Às vezes'] },
+        { name:'comentario', label:'Quer contar algo importante sobre como tem se sentido?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Estresse, esgotamento emocional ou burnout': [
+        { name:'contexto', label:'O estresse está mais ligado a qual área?', type:'select', required:true, options:['Trabalho','Estudo','Família','Várias áreas'] },
+        { name:'cansaco', label:'Como está seu nível de cansaço?', type:'select', required:true, options:['Leve','Moderado','Muito intenso'] },
+        { name:'sintomas', label:'Quais sinais têm chamado mais atenção?', type:'textarea', full:true, placeholder:'Ex.: irritação, dificuldade de descansar, sobrecarga' }
+      ],
+      'Dificuldades nos relacionamentos': [
+        { name:'tipoRel', label:'Em qual tipo de relacionamento isso acontece mais?', type:'select', required:true, options:['Família','Casamento/namoro','Amizades','Trabalho'] },
+        { name:'conflitos', label:'Isso tem gerado conflitos frequentes?', type:'select', required:true, options:['Sim','Não','Às vezes'] },
+        { name:'detalheRel', label:'O que mais tem incomodado?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Baixa autoestima ou insegurança': [
+        { name:'autoimagem', label:'Esse sentimento aparece em quais situações?', type:'select', required:true, options:['Vida pessoal','Relacionamentos','Trabalho/estudo','Em várias áreas'] },
+        { name:'intensidade', label:'Como está a intensidade disso hoje?', type:'select', required:true, options:['Leve','Moderada','Alta'] },
+        { name:'observacoes', label:'Quer acrescentar algo?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Dificuldade para lidar com emoções': [
+        { name:'emocao', label:'Quais emoções aparecem com mais frequência?', type:'select', required:true, options:['Medo','Raiva','Culpa','Frustração','Mais de uma'] },
+        { name:'controle', label:'Sente dificuldade para regular isso?', type:'select', required:true, options:['Pouca','Moderada','Muita'] },
+        { name:'situacoes', label:'Existe alguma situação recorrente ligada a isso?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Problemas de atenção, concentração ou memória': [
+        { name:'onde', label:'Essas dificuldades aparecem mais onde?', type:'select', required:true, options:['Trabalho','Estudo','Dia a dia','Em todos'] },
+        { name:'desdeQuando', label:'Há quanto tempo percebe isso?', type:'select', required:true, options:['Recente','Alguns meses','Há anos'] },
+        { name:'impactoCog', label:'Como isso tem impactado sua rotina?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Suspeita de TDAH, autismo ou outras condições do neurodesenvolvimento': [
+        { name:'suspeita', label:'Qual é a principal suspeita hoje?', type:'select', required:true, options:['TDAH','Autismo','Outra condição','Ainda não sei'] },
+        { name:'indicacao', label:'Já houve indicação profissional para investigar?', type:'select', required:true, options:['Sim','Não','Ainda não'] },
+        { name:'sinais', label:'Quais sinais motivaram essa busca?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Avaliação neuropsicológica': [
+        { name:'objetivoAval', label:'Qual o objetivo principal da avaliação?', type:'select', required:true, options:['Investigação diagnóstica','Orientação clínica','Apoio escolar','Apoio profissional','Outro'] },
+        { name:'encaminhamento', label:'Existe encaminhamento de outro profissional?', type:'select', required:true, options:['Sim','Não'] },
+        { name:'contextoAval', label:'Quer descrever brevemente o contexto?', type:'textarea', full:true, placeholder:'Opcional' }
+      ],
+      'Momentos de mudança ou crise na vida': [
+        { name:'tipoMudanca', label:'Que tipo de mudança ou crise está vivendo?', type:'select', required:true, options:['Luto','Separação','Mudança profissional','Mudança familiar','Outro'] },
+        { name:'apoio', label:'Tem rede de apoio neste momento?', type:'select', required:true, options:['Sim','Não','Pouca'] },
+        { name:'detalheMudanca', label:'Quer contar algo importante sobre esse momento?', type:'textarea', full:true, placeholder:'Opcional' }
+      ]
+    };
+
+    function openCauseForm(cause){
+      const fields = [
+        ...baseFields,
+        ...triageByCause[cause]
+      ];
+
+      openModal(
+        `Primeiro atendimento • ${cause}`,
+        'Ao enviar, uma mensagem padrão será montada com suas respostas e aberta no WhatsApp.',
+        {
+          fields,
+          buildMessage: (data) => {
+            return `Olá, meu nome é ${data.nome}.
+Vim pelo site e quero iniciar atendimento.
+
+Motivo principal: ${cause}
+Para quem é o atendimento: ${data.paraQuem}
+Modalidade: ${data.modalidade}
+
+Respostas da triagem:
+- Pergunta 1: ${Object.values(data)[3] || '-'}
+- Pergunta 2: ${Object.values(data)[4] || '-'}
+- Pergunta 3: ${Object.values(data)[5] || '-'}
+
+Gostaria de receber orientações iniciais e verificar disponibilidade de horário.`;
+          }
+        }
+      );
+    }
+
+    document.querySelectorAll('[data-cause]').forEach(btn => {
+      btn.addEventListener('click', () => openCauseForm(btn.dataset.cause));
+    });
+
+    // Área do paciente
+    document.getElementById('btnNovaConsultaPaciente').addEventListener('click', () => {
+      openModal(
+        'Marcar nova consulta',
+        'Preencha para montar a mensagem de solicitação de nova consulta.',
+        {
+          fields: [
+            { name:'nome', label:'Nome', type:'text', required:true },
+            { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+            { name:'modalidade', label:'Modalidade', type:'select', required:true, options:['online','presencial'] },
+            { name:'turno', label:'Turno de preferência', type:'select', required:true, options:['manhã','tarde','noite'] },
+            { name:'observacao', label:'Observação', type:'textarea', full:true, placeholder:'Opcional' }
+          ],
+          buildMessage: (data) => `Olá, meu nome é ${data.nome}.
+Sou paciente e gostaria de marcar uma nova consulta.
+
+Para quem é o atendimento: ${data.paraQuem}
+Modalidade: ${data.modalidade}
+Turno de preferência: ${data.turno}
+Observação: ${data.observacao || '-'}
+
+Poderiam me orientar sobre disponibilidade?`
+        }
+      );
+    });
+
+    document.getElementById('btnSolicitacao').addEventListener('click', () => {
+      openModal(
+        'Fazer solicitação',
+        'Use este formulário para pedidos administrativos.',
+        {
+          fields: [
+            { name:'nome', label:'Nome', type:'text', required:true },
+            { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+            { name:'modalidade', label:'Modalidade', type:'select', required:true, options:['online','presencial'] },
+            { name:'tipoSolicitacao', label:'Tipo de solicitação', type:'select', required:true, options:['Declaração','Atestado','Laudo','Relatório','Nota fiscal','Pagamento','Outro'] },
+            { name:'detalhe', label:'Detalhes da solicitação', type:'textarea', full:true, placeholder:'Descreva o que precisa' }
+          ],
+          buildMessage: (data) => `Olá, meu nome é ${data.nome}.
+Sou paciente e quero fazer uma solicitação.
+
+Para quem é o atendimento: ${data.paraQuem}
+Modalidade: ${data.modalidade}
+Tipo de solicitação: ${data.tipoSolicitacao}
+Detalhes: ${data.detalhe || '-'}
+
+Aguardo orientações, por favor.`
+        }
+      );
+    });
+
+    // Como funciona - dúvidas
+    document.getElementById('btnDuvidasComoFunciona').addEventListener('click', () => {
+      openModal(
+        'Tirar dúvidas',
+        'Preencha para enviar sua dúvida sobre o funcionamento do atendimento.',
+        {
+          fields: [
+            { name:'nome', label:'Nome', type:'text', required:true },
+            { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+            { name:'modalidade', label:'Modalidade', type:'select', required:true, options:['online','presencial'] },
+            { name:'duvidaFrequente', label:'Qual dúvida mais se aproxima do que você quer saber?', type:'select', required:true, options:['Como funciona a terapia','Tempo de atendimento','Avaliação neuropsicológica','Sigilo','Valores e pagamento','Outro'] },
+            { name:'detalheDuvida', label:'Sua dúvida', type:'textarea', full:true, placeholder:'Escreva sua dúvida' }
+          ],
+          buildMessage: (data) => `Olá, meu nome é ${data.nome}.
+Vim pelo site e tenho uma dúvida.
+
+Para quem é o atendimento: ${data.paraQuem}
+Modalidade: ${data.modalidade}
+Tema da dúvida: ${data.duvidaFrequente}
+Dúvida: ${data.detalheDuvida || '-'}
+
+Poderiam me orientar, por favor?`
+        }
+      );
+    });
+
+    // Sobre - falar WhatsApp
+    document.getElementById('btnFalarSobre').addEventListener('click', () => {
+      openModal(
+        'Falar no WhatsApp',
+        'Preencha para montar a mensagem de contato.',
+        {
+          fields: [
+            { name:'nome', label:'Nome', type:'text', required:true },
+            { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+            { name:'modalidade', label:'Modalidade', type:'select', required:true, options:['online','presencial'] },
+            { name:'mensagem', label:'Mensagem', type:'textarea', full:true, placeholder:'Opcional' }
+          ],
+          buildMessage: (data) => `Olá, meu nome é ${data.nome}.
+Vim pelo site e quero saber mais sobre o atendimento.
+
+Para quem é o atendimento: ${data.paraQuem}
+Modalidade: ${data.modalidade}
+Mensagem: ${data.mensagem || '-'}
+
+Poderiam me orientar?`
+        }
+      );
+    });
+
+    // Agenda
+    function isTuesday(dateStr){
+      const d = new Date(dateStr + 'T12:00:00');
+      return d.getDay() === 2;
+    }
+
+    function isWeekday(dateStr){
+      const d = new Date(dateStr + 'T12:00:00');
+      const day = d.getDay();
+      return day >= 1 && day <= 5;
+    }
+
+    document.getElementById('btnVerDisponibilidade').addEventListener('click', () => {
+      const modalidade = document.getElementById('agendaModalidade').value;
+      const data = document.getElementById('agendaData').value;
+      const turno = document.getElementById('agendaTurno').value;
+
+      if(!modalidade || !data || !turno){
+        alert('Selecione modalidade, dia e turno.');
+        return;
+      }
+
+      if(modalidade === 'presencial' && !isTuesday(data)){
+        alert('Atendimento presencial disponível somente às terças-feiras.');
+        return;
+      }
+
+      if(modalidade === 'online'){
+        if(!isWeekday(data) || isTuesday(data) === false && false){}
+        const d = new Date(data + 'T12:00:00');
+        const day = d.getDay();
+        if(day === 0 || day === 6){
+          alert('Atendimento online disponível apenas em dias úteis.');
+          return;
+        }
+        if(day === 2){
+          alert('Terça-feira é reservada ao atendimento presencial. Para online, escolha outro dia útil.');
+          return;
+        }
+      }
+
+      openModal(
+        'Ver disponibilidade',
+        'Preencha seus dados para montar a mensagem com o dia e turno escolhidos.',
+        {
+          fields: [
+            { name:'nome', label:'Nome', type:'text', required:true },
+            { name:'paraQuem', label:'Para quem é o atendimento?', type:'select', required:true, options:['Para mim','Para meu filho/minha filha','Para adolescente','Para outra pessoa'] },
+            { name:'modalidade', label:'Modalidade', type:'text', required:true, value:modalidade, readonly:true },
+            { name:'data', label:'Dia escolhido', type:'text', required:true, value:data, readonly:true },
+            { name:'turno', label:'Turno escolhido', type:'text', required:true, value:turno, readonly:true },
+            { name:'observacao', label:'Observação', type:'textarea', full:true, placeholder:'Opcional' }
+          ],
+          buildMessage: (info) => `Olá, meu nome é ${info.nome}.
+Vim pelo site e quero verificar disponibilidade.
+
+Para quem é o atendimento: ${info.paraQuem}
+Modalidade: ${info.modalidade}
+Dia escolhido: ${info.data}
+Turno escolhido: ${info.turno}
+Observação: ${info.observacao || '-'}
+
+Poderiam me informar os horários disponíveis?`
+        }
+      );
+    });
+
+    // Pagamento
+    const btnPay = document.getElementById('btnPay');
+    const btnPayHelp = document.getElementById('btnPayHelp');
+    const panelPay = document.getElementById('panelPay');
+    const panelHelp = document.getElementById('panelHelp');
+    const boxQr = document.getElementById('boxQr');
+    const boxCopy = document.getElementById('boxCopy');
+    const boxKey = document.getElementById('boxKey');
+
+    const optQr = document.getElementById('optQr');
+    const optCopy = document.getElementById('optCopy');
+    const optKey = document.getElementById('optKey');
+
+    function closeAllPayBoxes(){
+      [boxQr, boxCopy, boxKey].forEach(el => el.classList.remove('active'));
+    }
+
+    btnPay.addEventListener('click', () => {
+      panelPay.classList.add('active');
+      panelHelp.classList.remove('active');
+      closeAllPayBoxes();
+    });
+
+    btnPayHelp.addEventListener('click', () => {
+      panelHelp.classList.add('active');
+      panelPay.classList.remove('active');
+      closeAllPayBoxes();
+    });
+
+    document.getElementById('goToPayPanel').addEventListener('click', () => {
+      panelPay.classList.add('active');
+      panelHelp.classList.remove('active');
+      closeAllPayBoxes();
+    });
+
+    optQr.addEventListener('click', () => { closeAllPayBoxes(); boxQr.classList.add('active'); });
+    optCopy.addEventListener('click', () => { closeAllPayBoxes(); boxCopy.classList.add('active'); });
+    optKey.addEventListener('click', () => { closeAllPayBoxes(); boxKey.classList.add('active'); });
+
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.getAttribute('data-copy');
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const text = (el.innerText || el.textContent || '').trim();
+        try{
+          await navigator.clipboard.writeText(text);
+          btn.textContent = 'Copiado ✓';
+          setTimeout(() => btn.textContent = 'Copiar', 1200);
+        }catch(e){
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          btn.textContent = 'Copiado ✓';
+          setTimeout(() => btn.textContent = 'Copiar', 1200);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
